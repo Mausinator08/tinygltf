@@ -1721,6 +1721,9 @@ class TinyGLTF {
 #endif  // __GNUC__
 
 #ifndef TINYGLTF_NO_INCLUDE_JSON
+#ifdef TINYGLTF_USE_MINIJSON
+#include "minijson.h"
+#else // !TINYGLTF_USE_MINIJSON
 #ifndef TINYGLTF_USE_RAPIDJSON
 #include "json.hpp"
 #else
@@ -1732,6 +1735,7 @@ class TinyGLTF {
 #include "writer.h"
 #endif
 #endif
+#endif // !TINYGLTF_USE_MINIJSON
 #endif
 
 #ifdef TINYGLTF_ENABLE_DRACO

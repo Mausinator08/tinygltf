@@ -1,6 +1,7 @@
 //
 // TODO(syoyo): Print extensions and extras for each glTF object.
 //
+#include <iostream>
 #define TINYGLTF_IMPLEMENTATION
 #define STB_IMAGE_IMPLEMENTATION
 #define STB_IMAGE_WRITE_IMPLEMENTATION
